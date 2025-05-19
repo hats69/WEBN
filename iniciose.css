@@ -1,0 +1,344 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Viewport para responsive (incluir en el HTML) */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkgoldenrod;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+    color: gold;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 0.95em;
+}
+.login-form button {
+    padding: 7px 14px;
+    background-color: #1abc9c;
+    border: none;
+    color: black;
+    border-radius: 4px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-form button:hover {
+    background-color: #16a085;
+}
+
+/* Barra animada */
+.cat {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    height: 70px;
+    position: relative;
+}
+.cat p {
+    position: absolute;
+    white-space: nowrap;
+    color: gold;
+    font-size: 3.5rem;
+    animation: mover-letras 20s linear infinite;
+}
+@keyframes mover-letras {
+    from { left: 100%; }
+    to { left: -100%; }
+}
+
+/* Carrito */
+.carrito-nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.btn-carrito-nav {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: darkgoldenrod;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Modal del carrito */
+.carrito-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+.carrito-contenido {
+    background-color: #222;
+    width: 80%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.carrito-contenido p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.carrito-contenido button {
+    background-color: darkgoldenrod;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.carrito-contenido button:hover {
+    background-color: goldenrod;
+}
+.btn-pagar {
+    width: 100%;
+    padding: 15px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn-pagar:hover {
+    background-color: #d35400;
+}
+
+/* Productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
+}
+.producto {
+    flex: 1 1 calc(25% - 20px);
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.producto:hover {
+    transform: scale(1.05);
+}
+.producto img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.producto h3 {
+    font-size: 1.6rem;
+    margin: 10px 0 5px;
+    color: #000;
+}
+.producto p {
+    font-size: 1.2rem;
+    color: #444;
+}
+.producto .precio {
+    font-weight: bold;
+    color: #111;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+.btn-comprar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-comprar:hover {
+    background-color: #999;
+}
+
+/* Footer */
+footer img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+.footer p {
+    color: white;
+}
+
+/* Índice (opcional) */
+.indice {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    text-align: center;
+}
+.indice div {
+    width: 40%;
+}
+.indice img {
+    width: 60%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.indice img:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen de perfil */
+#preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#preview-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+/* Botón Agregar al carrito */
+.btn-agregar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-agregar:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+.btn-agregar:active {
+    background-color: #000;
+    transform: scale(0.98);
+}
+.btn-agregar:focus {
+    outline: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .producto {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        background-color: black;
+        padding: 10px;
+        color: white;
+    }
+    .login-form {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .login-form input,
+    .login-form button {
+        width: 100%;
+    }
+    .producto {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .producto {
+        flex: 1 1 100%;
+    }
+}
